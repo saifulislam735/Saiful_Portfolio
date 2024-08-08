@@ -17,12 +17,7 @@ const About = () => {
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis
-        sapiente ipsum dolorum dicta eaque cumque inventore molestias, beatae ea
-        quaerat alias accusamus voluptas autem! Alias odit voluptates in totam
-        vitae dignissimos minus eaque culpa unde tempore dolore aperiam
-        obcaecati voluptatum aliquam corrupti, suscipit accusamus! Odit unde
-        veniam dolorum ipsum doloribus.
+        I specialize in delivering end-to-end web development solutions, focusing on creating seamless and responsive user experiences. Whether it’s frontend development, backend architecture, or UI/UX design, I ensure every project is executed with precision and innovation.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

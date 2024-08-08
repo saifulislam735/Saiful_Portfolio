@@ -151,7 +151,7 @@ const educations = [
   },
   {
     title: 'HSC',
-    company_name: 'B N College, Dhaka',
+    company_name: 'B N College Dhaka',
     icon: microverse,
     iconBg: '#333333',
     date: '2020',

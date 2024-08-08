@@ -39,7 +39,7 @@ const ProjectCard = ({
           <h3
             className="font-extrabold font-beckman uppercase w-[200px] h-[30px] 
         whitespace-nowrap sm:text-[27px] text-[18px] text-timberWolf tracking-[1px]
-        absolute z-0 lg:bottom-[7rem] lg:rotate-[-90deg] lg:origin-[0,0]
+        absolute  lg:bottom-[7rem] lg:rotate-[-90deg] lg:origin-[0,0]
         leading-none z-20">
             {name}
           </h3>
@@ -123,11 +123,8 @@ const Projects = () => {
         <motion.p
           variants={fadeIn('', '', 0.1, 1)}
           className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
-          These projects demonstrate my expertise with practical examples of
-          some of my work, including brief descriptions and links to code
-          repositories and live demos. They showcase my ability to tackle
-          intricate challenges, adapt to various technologies, and efficiently
-          oversee projects.
+          I want to showcases some of the projects that reflect my expertise in web development. These examples provide practical demonstrations of my work, including brief descriptions, code repositories, and live demos. They highlight my ability to tackle intricate challenges, adapt to various technologies, and efficiently manage projects from concept to completion.
+
         </motion.p>
       </div>
 
