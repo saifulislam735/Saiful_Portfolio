@@ -2,12 +2,13 @@ import { BrowserRouter } from 'react-router-dom';
 import {
   About,
   Contact,
-  Experience,
+  // Experience,
   Hero,
   Navbar,
   Tech,
   Projects,
 } from './components';
+import Education from './components/Pages/Education/Education';
 
 const App = () => {
   return (
@@ -34,10 +35,12 @@ const App = () => {
           <div
             className="bg-experienceLight bg-cover bg-center 
             bg-no-repeat rounded-tl-[150px] rounded-br-[130px]">
-            <Experience />
+            {/* <Experience /> */}
+            <Education></Education>
           </div>
         </div>
-        <div className="relative z-0">
+        <div style={{
+        }} className="">
           <Contact />
         </div>
       </div>

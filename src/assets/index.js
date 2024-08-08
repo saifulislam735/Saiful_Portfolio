@@ -4,9 +4,12 @@ import whiteabstract from './backgrounds/white-abstract.png';
 import worldmap from './backgrounds/world-map.png';
 
 import logo from './logo/logo-black.png';
-import logotext from './logo/logo-text-black.png';
+import logotext from './logo/Name&Sign.png'
+import logotext2 from './logo/Name.png'
 
 import shaq from './personal/shaq.png';
+import shihab from './personal/shihab.jpg';
+import shihabImageWithoutBackground from './personal/shihab.png'
 
 import backend from './icons/backend.png';
 import ux from './icons/ux.png';
@@ -56,8 +59,11 @@ export {
   whiteabstract,
   worldmap,
   logo,
+  logotext2,
   logotext,
   shaq,
+  shihab,
+  shihabImageWithoutBackground,
   backend,
   ux,
   frontend,
