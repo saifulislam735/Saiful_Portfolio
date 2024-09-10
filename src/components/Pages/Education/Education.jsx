@@ -5,12 +5,11 @@ import { styles } from '../../../styles';
 import { educations } from '../../../Data';
 import { SectionWrapper } from '../../../hoc';
 import { textVariant } from '../../../utils/motion';
-import { Link } from 'react-router-dom';
-import { IoDownloadOutline } from 'react-icons/io5';
+
 
 const EducationCard = ({ education }) => (
     <VerticalTimelineElement
-        id={education.id}
+        id='education'
         contentStyle={{
             background: '#eaeaec',
             color: '#292929',
@@ -22,7 +21,7 @@ const EducationCard = ({ education }) => (
         }}
         date={
             <div>
-                <h3 className="text-dim text-[18px] font-bold font-beckman">
+                <h3 className="text-white text-[18px] font-bold font-beckman">
                     {education.date}
                 </h3>
             </div>
@@ -52,16 +51,6 @@ const EducationCard = ({ education }) => (
 
 const Education = () => {
 
-    const resumeDownload = () => {
-        const pdfUrl = "Saiful_Islam_RESUME.pdf";
-        const link = document.createElement("a");
-        link.href = pdfUrl;
-        link.download = "Saiful Islam Resume";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    };
-
 
     return (
 
@@ -80,39 +69,6 @@ const Education = () => {
                     {educations.map((education, index) => (
                         <EducationCard key={index} education={education} />
                     ))}
-                    <VerticalTimelineElement
-                        contentStyle={{
-                            background: '#eaeaec',
-                            color: '#292929',
-                            boxShadow:
-                                'rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                        }}
-                        contentArrowStyle={{
-                            borderRight: '7px solid  #232631',
-                        }}
-                    >
-                        <Link
-                            className="live-demo flex justify-between 
-                                sm:text-[18px] text-[14px] text-timberWolf 
-                                font-bold font-beckman items-center py-5 pl-3 pr-3 
-                                whitespace-nowrap gap-1 sm:w-[148px] sm:h-[58px] 
-                                w-[125px] h-[46px] rounded-[10px] bg-jetLight 
-                                sm:mt-[22px] mt-[16px] hover:bg-battleGray 
-                                hover:text-eerieBlack transition duration-[0.2s] 
-                                ease-in-out"
-                            onClick={resumeDownload}
-
-                        >
-                            <div style={{fontWeight: '800', fontSize: '24px',display:'flex',alignItems:'center',gap:'5px'}}>
-                                MY RESUME
-                                <IoDownloadOutline />
-                            </div>
-
-                        </Link>
-                    </VerticalTimelineElement>
                 </VerticalTimeline>
             </div>
         </>

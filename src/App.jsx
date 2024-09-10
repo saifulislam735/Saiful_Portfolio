@@ -7,6 +7,7 @@ import {
   Navbar,
   Tech,
   Projects,
+  Experience,
 } from './components';
 import Education from './components/Pages/Education/Education';
 
@@ -37,6 +38,16 @@ const App = () => {
             bg-no-repeat rounded-tl-[150px] rounded-br-[130px]">
             {/* <Experience /> */}
             <Education></Education>
+          </div>
+        </div>
+        <div
+          className="bg-experience bg-cover bg-center bg-no-repeat 
+            rounded-tl-[150px] rounded-br-[150px]">
+          <div
+            className="bg-experienceLight bg-cover bg-center 
+            bg-no-repeat rounded-tl-[150px] rounded-br-[130px]">
+            {/* <Experience /> */}
+            <Experience></Experience>
           </div>
         </div>
         <div style={{

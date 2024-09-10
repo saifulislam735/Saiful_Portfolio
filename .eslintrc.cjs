@@ -20,6 +20,7 @@ module.exports = {
   },
   plugins: ['react-refresh'],
   rules: {
+    "react/no-unknown-property": ["error", { ignore: ["jsx"] }],
     'react-refresh/only-export-components': 'warn',
     'react/prop-types': 'off',
   },

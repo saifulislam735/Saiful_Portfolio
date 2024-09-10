@@ -31,7 +31,7 @@ const styles = {
 
   sectionSubText:
     'sm:text-[18px] text-[16px] text-taupe uppercase tracking-wider font-semibold font-poppins',
-    
+
   sectionSubTextLight:
     'sm:text-[18px] text-[16px] text-taupe uppercase tracking-wider font-semibold font-poppins',
 };

@@ -4,6 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @font-face {
   font-family: 'Arenq';
   src: url('./fonts/arenq.otf');
@@ -81,11 +82,9 @@
 
 .vertical-timeline.vertical-timeline-custom-line::before {
   background: rgb(66, 66, 66);
-  background: linear-gradient(
-    180deg,
-    rgba(66, 66, 66, 0.8) 40%,
-    rgba(234, 234, 236, 0.45) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(66, 66, 66, 0.8) 40%,
+      rgba(234, 234, 236, 0.45) 100%);
 }
 
 .vertical-timeline-element-icon {
@@ -115,20 +114,16 @@
 
 .bw-gradient {
   background: rgb(10, 10, 10);
-  background: linear-gradient(
-    180deg,
-    rgba(10, 10, 10, 0.8) 40%,
-    rgba(153, 153, 161, 0) 70%
-  );
+  background: linear-gradient(180deg,
+      rgba(10, 10, 10, 0.8) 40%,
+      rgba(153, 153, 161, 0) 70%);
 }
 
 .card-gradient {
   background: rgb(244, 244, 246);
-  background: linear-gradient(
-    158deg,
-    rgba(153, 153, 161, 1) 25%,
-    rgba(153, 153, 161, 1) 100%
-  );
+  background: linear-gradient(158deg,
+      rgba(153, 153, 161, 1) 25%,
+      rgba(153, 153, 161, 1) 100%);
 }
 
 /* canvas- styles */
@@ -144,6 +139,7 @@
 }
 
 @keyframes mulShdSpin {
+
   0%,
   100% {
     box-shadow: 0em -2.6em 0em 0em #ffffff,
@@ -155,6 +151,7 @@
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.5),
       -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7);
   }
+
   12.5% {
     box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.7),
       1.8em -1.8em 0 0em #ffffff, 2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
@@ -164,6 +161,7 @@
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
       -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5);
   }
+
   25% {
     box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.5),
       1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7), 2.5em 0em 0 0em #ffffff,
@@ -173,6 +171,7 @@
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
       -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
   }
+
   37.5% {
     box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
       1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5),
@@ -182,6 +181,7 @@
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
       -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
   }
+
   50% {
     box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
       1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
@@ -191,6 +191,7 @@
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
       -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
   }
+
   62.5% {
     box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
       1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
@@ -200,6 +201,7 @@
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
       -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
   }
+
   75% {
     box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
       1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
@@ -209,6 +211,7 @@
       -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.7), -2.6em 0em 0 0em #ffffff,
       -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
   }
+
   87.5% {
     box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
       1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),

@@ -12,16 +12,20 @@ import {
   nodejs,
   git,
   figma,
-  komikult,
-  leaderboard,
-  math,
-  movie,
-  nyeusi,
   coverhunt,
-  dcc,
-  kelhel,
+  // dcc,
+  // kelhel,
   microverse,
+  school,
+  college,
+  university,
+  onlinerestaurant,
+  carservicing,
+  newspaper,
+  weatherupdate,
+  jobsearch
 } from '../assets';
+
 
 export const navLinks = [
   {
@@ -31,6 +35,10 @@ export const navLinks = [
   {
     id: 'projects',
     title: 'Projects',
+  },
+  {
+    id: 'education',
+    title: 'education',
   },
   {
     id: 'resume',
@@ -102,66 +110,53 @@ const technologies = [
 
 ];
 
+
 const experiences = [
   {
-    title: 'Front-End Developer',
-    company_name: 'Cover Hunt',
+    title: 'FUll Stack Developer',
+    company_name: 'Ruet Career Forum',
     icon: coverhunt,
     iconBg: '#333333',
-    date: 'Aug 2021 - Feb 2022',
+    date: 'Aug 2023 - Present',
   },
   {
-    title: 'Mentor (Volunteer)',
-    company_name: 'Microverse',
+    title: 'FUll Stack Developer',
+    company_name: 'Brumley Law Firm',
     icon: microverse,
     iconBg: '#333333',
-    date: 'Mar 2022 - May 2022',
-  },
-  {
-    title: 'Junior Software Engineer',
-    company_name: 'Kelhel',
-    icon: kelhel,
-    iconBg: '#333333',
-    date: 'May 2022 - Oct 2022',
-  },
-  {
-    title: 'Full Stack Developer',
     id: 'resume',
-    company_name: 'Diversity Cyber Council',
-    icon: dcc,
-    iconBg: '#333333',
-    date: 'Sep 2022 - Present',
+    date: 'September 2024 - Present',
   },
+
 ];
 
 const educations = [
   {
     title: 'JSC',
     company_name: 'Ramganj High School',
-    icon: dcc,
+    icon: school,
     iconBg: '#333333',
     date: '2016',
   },
   {
     title: 'SSC',
     company_name: 'Ramganj High School',
-    icon: coverhunt,
+    icon: school,
     iconBg: '#333333',
     date: '2018',
   },
   {
     title: 'HSC',
     company_name: 'B N College Dhaka',
-    icon: microverse,
+    icon: college,
     iconBg: '#333333',
     date: '2020',
   },
   {
     title: 'B.Sc. in ETE',
     company_name: 'RUET',
-    icon: kelhel,
+    icon: university,
     iconBg: '#333333',
-    id: 'resume',
     date: 'March 2022 - Present',
   }
 ];
@@ -169,8 +164,8 @@ const educations = [
 const projects = [
   {
     id: 'project-1',
-    name: 'KomiKult',
-    description: 'A comic characters list app that displays Marvel characters.',
+    name: 'car servicing',
+    description: 'An online service for booking and managing car repairs with local mechanics.',
     tags: [
       {
         name: 'react',
@@ -185,15 +180,15 @@ const projects = [
         color: 'pink-text-gradient',
       },
     ],
-    image: komikult,
-    repo: 'https://github.com/shaqdeff/KomiKult',
-    demo: 'https://shaqdeff.github.io/KomiKult/',
+    image: carservicing,
+    repo: 'https://github.com/saifulislam735/Car-Servicings',
+    demo: 'https://car-servicings.vercel.app/',
   },
   {
     id: 'project-2',
-    name: 'Leaderboard',
+    name: 'Online Restaurant',
     description:
-      'A leaderboard list app that displays scores submitted by different players.',
+      'An online platform for ordering food from your favorite local restaurants with easy navigation and secure payment options',
     tags: [
       {
         name: 'react',
@@ -208,14 +203,14 @@ const projects = [
         color: 'pink-text-gradient',
       },
     ],
-    image: leaderboard,
-    repo: 'https://github.com/shaqdeff/Leaderboard',
-    demo: 'https://shaqdeff.github.io/Leaderboard/',
+    image: onlinerestaurant,
+    repo: 'https://github.com/saifulislam735/White-Castle-Restaurant-',
+    demo: 'https://white-castle-restaurant-client.vercel.app/',
   },
   {
     id: 'project-3',
-    name: 'Math Magicians',
-    description: 'This is a single-page calculator app built with React',
+    name: 'News Paper',
+    description: 'This is a Newspaper website  built with React',
     tags: [
       {
         name: 'nextjs',
@@ -230,14 +225,14 @@ const projects = [
         color: 'pink-text-gradient',
       },
     ],
-    image: math,
-    repo: 'https://github.com/shaqdeff/Math-Magicians',
-    demo: 'https://inspiring-medovik-37d3b3.netlify.app/',
+    image: newspaper,
+    repo: 'https://github.com/saifulislam735/newspaper',
+    demo: 'https://github.com/saifulislam735/newspaper',
   },
   {
     id: 'project-4',
-    name: 'Movie Metro',
-    description: `A single-page application that allows users to search for any movie or show's ratings and its details.`,
+    name: 'Weather Update',
+    description: `A single-page application that allows users to search for current weather update`,
     tags: [
       {
         name: 'nextjs',
@@ -252,15 +247,15 @@ const projects = [
         color: 'pink-text-gradient',
       },
     ],
-    image: movie,
-    repo: 'https://github.com/shaqdeff/Movie-Metro',
-    demo: 'https://movie-metro.netlify.app/',
+    image: weatherupdate,
+    repo: 'https://github.com/saifulislam735/Weather-Update-API-',
+    demo: 'https://saifulislam735.github.io/Weather-Update-API-/',
   },
   {
     id: 'project-5',
-    name: 'Nyeusi Fest Site',
+    name: 'Career Lift',
     description:
-      'This is a demo concert website for a music festival called Nyeusi.',
+      'This is a demo concept website for a Job Searching Website.',
     tags: [
       {
         name: 'nextjs',
@@ -275,9 +270,9 @@ const projects = [
         color: 'pink-text-gradient',
       },
     ],
-    image: nyeusi,
-    repo: 'https://github.com/shaqdeff/Nyeusi-Fest-Site',
-    demo: 'https://shaqdeff.github.io/Nyeusi-Fest-Site/',
+    image: jobsearch,
+    repo: 'https://github.com/saifulislam735/Career_Lift',
+    demo: 'https://saifulislam735.github.io/Career_Lift/',
   },
 ];
 

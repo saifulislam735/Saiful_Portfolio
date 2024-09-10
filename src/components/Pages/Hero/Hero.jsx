@@ -69,9 +69,9 @@ const Hero = () => {
                 transition={{
                   duration: 1.5,
                   repeat: Infinity,
-                  repeatType: 'loop',
+                  repeatType: 'mirror ',
                 }}
-                className="w-3 h-3 rounded-full bg-taupe mb-1"
+                className="w-3 h-3 rounded-full bg-white mb-1"
               />
             </div>
           </a>

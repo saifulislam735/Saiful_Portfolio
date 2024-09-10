@@ -7,9 +7,10 @@ import 'react-vertical-timeline-component/style.min.css';
 import { styles } from '../../../styles';
 import { experiences } from '../../../Data';
 import { SectionWrapper } from '../../../hoc';
-import { download, downloadHover, resume } from '../../../assets';
 import { textVariant } from '../../../utils/motion';
-
+import { IoDownloadOutline } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
+import resume from '../../../assets/icons/resume.png';
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
     id={experience.id}
@@ -24,7 +25,7 @@ const ExperienceCard = ({ experience }) => (
     }}
     date={
       <div>
-        <h3 className="text-dim text-[18px] font-bold font-beckman">
+        <h3 className="text-white text-[18px] font-bold font-beckman">
           {experience.date}
         </h3>
       </div>
@@ -53,6 +54,15 @@ const ExperienceCard = ({ experience }) => (
 );
 
 const Experience = () => {
+  const resumeDownload = () => {
+    const pdfUrl = "Saiful_Islam_RESUME.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "Saiful Islam Resume";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -71,6 +81,8 @@ const Experience = () => {
           )
           )}
           <VerticalTimelineElement
+
+
             contentStyle={{
               background: '#eaeaec',
               color: '#292929',
@@ -83,49 +95,34 @@ const Experience = () => {
             contentArrowStyle={{
               borderRight: '7px solid  #232631',
             }}
-            iconStyle={{ background: '#333333' }}
+
             icon={
               <div className="flex justify-center items-center w-full h-full">
                 <img
                   src={resume}
-                  alt="resume"
-                  className="w-[45%] h-[45%] object-contain"
+                  className="w-[60%] h-[60%] object-contain"
                 />
               </div>
-            }>
-            <button
+            }
+          >
+            <Link
               className="live-demo flex justify-between 
-              sm:text-[18px] text-[14px] text-timberWolf 
-              font-bold font-beckman items-center py-5 pl-3 pr-3 
-              whitespace-nowrap gap-1 sm:w-[148px] sm:h-[58px] 
-              w-[125px] h-[46px] rounded-[10px] bg-jetLight 
-              sm:mt-[22px] mt-[16px] hover:bg-battleGray 
-              hover:text-eerieBlack transition duration-[0.2s] 
-              ease-in-out"
-              onClick={() =>
-                window.open(
-                  'resume link', //paste the link to your resume here
-                  '_blank'
-                )
-              }
-              onMouseOver={() => {
-                document
-                  .querySelector('.download-btn')
-                  .setAttribute('src', downloadHover);
-              }}
-              onMouseOut={() => {
-                document
-                  .querySelector('.download-btn')
-                  .setAttribute('src', download);
-              }}>
-              MY RESUME
-              <img
-                src={download}
-                alt="download"
-                className="download-btn sm:w-[26px] sm:h-[26px] 
-                w-[23px] h-[23px] object-contain"
-              />
-            </button>
+                                sm:text-[18px] text-[14px] text-timberWolf 
+                                font-bold font-beckman items-center py-5 pl-3 pr-3 
+                                whitespace-nowrap gap-1 sm:w-[148px] sm:h-[58px] 
+                                w-[125px] h-[46px] rounded-[10px] bg-jetLight 
+                                sm:mt-[22px] mt-[16px] hover:bg-battleGray 
+                                hover:text-eerieBlack transition duration-[0.2s] 
+                                ease-in-out"
+              onClick={resumeDownload}
+
+            >
+              <div style={{ fontWeight: '800', fontSize: '24px', display: 'flex', alignItems: 'center', gap: '5px' }}>
+                MY RESUME
+                <IoDownloadOutline />
+              </div>
+
+            </Link>
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>

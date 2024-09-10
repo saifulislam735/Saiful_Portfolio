@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { styles } from '../../../styles';
 import { navLinks } from '../../../Data';
 import { close, menu, logo, logotext2 } from '../../../assets';
-
+import './Navbar.css'
 const Navbar = () => {
   const [active, setActive] = useState('');
   const [toggle, setToggle] = useState(false);
@@ -63,15 +63,13 @@ const Navbar = () => {
                 />
               </div>
               <ul
-                className="list-none flex flex-col -gap-[1rem] 
-                items-start justify-end mt-[10rem] -ml-[35px]">
+                className="list-none mt-[2rem] bg-white/50 text-center rounded-md w-1/3 py-2 px-4 ml-auto">
                 {navLinks.map((nav) => (
                   <li
-                    id={nav.id}
                     key={nav.id}
-                    className={`${active === nav.title ? 'text-french' : 'text-eerieBlack'
-                      } text-[88px] font-bold font-arenq 
-                      uppercase tracking-[1px] cursor-pointer`}
+                    className={`${active === nav.title ? 'text-black' : 'text-black'
+                      } text-[16px] font-bold  
+        uppercase tracking-[1px] nav-text block w-full text-left`}
                     onClick={() => {
                       setToggle(!toggle);
                       setActive(nav.title);
@@ -80,6 +78,9 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
+
+
+
             </div>
           ) : (
             <img

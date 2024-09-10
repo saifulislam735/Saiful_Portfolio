@@ -46,13 +46,16 @@ import dcc from './company/dcc.png';
 import kelhel from './company/kelhel.png';
 import microverse from './company/microverse.png';
 
-import komikult from './projects/komikult.png';
-import leaderboard from './projects/leaderboard.png';
-import math from './projects/math-magicians.png';
-import movie from './projects/movie-metro.png';
-import nyeusi from './projects/nyeusi.png';
-import space from './projects/space-hub.png';
 
+import school from '../assets/Education/school.png'
+import college from '../assets/Education/college.png'
+import university from '../assets/Education/university.png'
+
+import onlinerestaurant from '../assets/projects/restaurant.png'
+import carservicing from '../assets/projects/carservicing.png'
+import newspaper from '../assets/projects/newspaper.png'
+import weatherupdate from '../assets/projects/weatherUpdate.png'
+import jobsearch from '../assets/projects/JobSearch.png'
 export {
   bwmap,
   nairobi,
@@ -92,14 +95,16 @@ export {
   redux,
   tailwind,
   typescript,
-  komikult,
-  leaderboard,
-  math,
-  movie,
-  nyeusi,
-  space,
   coverhunt,
   dcc,
   kelhel,
   microverse,
+  university,
+  college,
+  school,
+  onlinerestaurant,
+  carservicing,
+  newspaper,
+  weatherupdate,
+  jobsearch
 };
