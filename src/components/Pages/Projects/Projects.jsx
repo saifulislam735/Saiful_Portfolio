@@ -113,7 +113,9 @@ const Projects = () => {
   const [active, setActive] = useState('project-2');
 
   return (
-    <div className="-mt-[6rem]">
+    <div
+    style={{ fontFamily: 'Poppins ' }}
+     className="-mt-[6rem]">
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>Case Studies</p>
         <h2 className={`${styles.sectionHeadTextLight}`}>Projects.</h2>
@@ -122,7 +124,7 @@ const Projects = () => {
       <div className="w-full flex">
         <motion.p
           variants={fadeIn('', '', 0.1, 1)}
-          className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
+          className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px] text-justify">
           I want to showcases some of the projects that reflect my expertise in web development. These examples provide practical demonstrations of my work, including brief descriptions, code repositories, and live demos. They highlight my ability to tackle intricate challenges, adapt to various technologies, and efficiently manage projects from concept to completion.
 
         </motion.p>

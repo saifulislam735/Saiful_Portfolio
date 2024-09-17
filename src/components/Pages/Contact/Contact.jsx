@@ -5,6 +5,7 @@ import { styles } from '../../../styles';
 import { SectionWrapper } from '../../../hoc';
 import { slideIn } from '../../../utils/motion';
 import { send, sendHover } from '../../../assets';
+import Swal from 'sweetalert2';
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -34,7 +35,13 @@ const Contact = () => {
     try {
       await emailjs.sendForm(serviceId, templateId, formRef.current);
       setLoading(false);
-      alert('Thank you. I will get back to you as soon as possible.');
+      Swal.fire({
+        title: "Good job!",
+        text: "Thank you. I will get back to you as soon as possible.",
+        icon: "success"
+      });
+
+      // alert('Thank you. I will get back to you as soon as possible.');
       setForm({
         user_name: '',
         user_email: '',
@@ -42,7 +49,15 @@ const Contact = () => {
       });
     } catch (error) {
       setLoading(false);
+
       console.error('Failed to send email:', error);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+        footer: '<a href="#">Why do I have this issue?</a>'
+      });
+
       alert('Something went wrong. Please try again.');
     }
   };
@@ -50,7 +65,7 @@ const Contact = () => {
   return (
     <div
       style={{ background: 'rgba(31, 31, 31, 0.8)' }}
-      className="flex justify-center items-center -mt-[8rem] xl:flex-row flex-col-reverse gap-10 overflow-hidden pt-8"
+      className="flex justify-center mx-3 items-center -mt-[8rem] xl:flex-row flex-col-reverse gap-10 overflow-hidden pt-8"
     >
       <motion.div
         variants={slideIn('left', 'tween', 0.2, 1)}
@@ -86,6 +101,7 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="What's your email?"
               className="bg-eerieBlack py-4 px-6 placeholder:text-taupe text-timberWolf rounded-lg outline-none border-none font-medium"
+              required
             />
           </label>
           <label className="flex flex-col">
@@ -97,12 +113,13 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="What's your message?"
               className="bg-eerieBlack py-4 px-6 placeholder:text-taupe text-timberWolf rounded-lg outline-none border-none font-medium resize-none"
+              required
             />
           </label>
 
           <button
             type="submit"
-            className="live-demo flex justify-center sm:gap-4 gap-3 sm:text-[20px] text-[16px] text-timberWolf font-bold font-beckman items-center py-5 whitespace-nowrap sm:w-[130px] sm:h-[50px] w-[100px] h-[45px] rounded-[10px] bg-night hover:bg-battleGray hover:text-eerieBlack transition duration-[0.2s] ease-in-out bg-slate-700"
+            className="live-demo flex justify-center sm:gap-4 gap-3 sm:text-[20px] text-[16px] text-timberWolf font-bold font-beckman items-center py-5 whitespace-nowrap sm:w-[130px] sm:h-[50px] w-[100px] h-[45px] rounded-[10px] bg-night hover:bg-battleGray hover:text-eerieBlack transition duration-[0.2s] ease-in-out bg-slate-700 px-2"
             onMouseOver={() => {
               document.querySelector('.contact-btn').src = sendHover;
             }}
@@ -114,7 +131,7 @@ const Contact = () => {
             <img
               src={send}
               alt="send"
-              className="contact-btn sm:w-[26px] sm:h-[26px] w-[23px] h-[23px] object-contain"
+              className="contact-btn sm:w-[26px] sm:h-[26px] w-[23px] h-[23px] object-contain "
             />
           </button>
         </form>

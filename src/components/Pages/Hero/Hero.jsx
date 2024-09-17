@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { styles } from '../../../styles';
 import { shihabImageWithoutBackground, bwmap, worldmap } from '../../../assets';
+import Type from '../../../utils/Type/Type';
 
 const Hero = () => {
   return (
@@ -44,7 +45,9 @@ const Hero = () => {
               </span>
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-eerieBlack`}>
-              I am a MERN stack developer with a passion for building dynamic web applications.
+
+              {/* dynamic text representing  */}
+              <Type></Type>
             </p>
           </div>
           <div

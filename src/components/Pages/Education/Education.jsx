@@ -9,6 +9,7 @@ import { textVariant } from '../../../utils/motion';
 
 const EducationCard = ({ education }) => (
     <VerticalTimelineElement
+        style={{ fontFamily: 'Poppins ' }}
         id='education'
         contentStyle={{
             background: '#eaeaec',
@@ -21,7 +22,7 @@ const EducationCard = ({ education }) => (
         }}
         date={
             <div>
-                <h3 className="text-white text-[18px] font-bold font-beckman">
+                <h3 className="text-white text-[18px] font-bold ">
                     {education.date}
                 </h3>
             </div>
@@ -37,11 +38,11 @@ const EducationCard = ({ education }) => (
             </div>
         }>
         <div>
-            <h3 className="text-jetLight text-[24px] font-bold font-beckman tracking-[2px]">
+            <h3 className=" text-[24px] font-bold  tracking-[2px]">
                 {education.title}
             </h3>
             <p
-                className="text-taupe text-[22px] font-semibold font-overcameBold tracking-[1px]"
+                className=" text-[22px] font-bold  tracking-[1px]"
                 style={{ margin: 0 }}>
                 {education.company_name}
             </p>
@@ -55,7 +56,10 @@ const Education = () => {
     return (
 
         <>
-            <motion.div variants={textVariant()}>
+            <motion.div
+                style={{ fontFamily: 'Poppins ' }}
+                variants={textVariant()}>
+
                 <p className={`${styles.sectionSubText} sm:pl-16 pl-[2rem]`}>
                     What I have learned so far
                 </p>

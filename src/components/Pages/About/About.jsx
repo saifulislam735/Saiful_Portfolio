@@ -8,7 +8,10 @@ import ServiceCard from './ServiceCard';
 
 const About = () => {
   return (
-    <div className="-mt-[6rem]">
+    <div
+      style={{ fontFamily: 'Poppins ' }}
+      className="-mt-[6rem]">
+
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
@@ -16,7 +19,7 @@ const About = () => {
 
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
-        className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
+        className="mt-4  text-[18px] max-w-3xl leading-[30px] text-justify">
         I specialize in delivering end-to-end web development solutions, focusing on creating seamless and responsive user experiences. Whether it’s frontend development, backend architecture, or UI/UX design, I ensure every project is executed with precision and innovation.
       </motion.p>
 
